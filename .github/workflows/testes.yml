@@ -1,0 +1,31 @@
+name: 'Tests'
+
+on: pull_request
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.11.1
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start the server
+      run: npm run dev &
+
+    - name: Wait for server to start
+      run: sleep 10
+
+    - name: Run Cypress tests
+      run: npm run cypress:headless
+
+    - name: Run Jest tests
+      run: npm run test
