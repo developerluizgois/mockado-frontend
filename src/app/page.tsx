@@ -1,5 +1,5 @@
-export default function Home() {
-  return (
-    <main></main>
-  );
+import { redirect } from "@/navigation";
+
+export default function RootPage() {
+  redirect("/en/about");
 }
