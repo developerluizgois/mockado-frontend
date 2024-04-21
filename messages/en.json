@@ -22,6 +22,16 @@
         "title": "Customization",
         "description": "Type, Gender, Format, Code"
       }
+    },
+    "languages": {
+      "english": {
+        "name": "English",
+        "code": "en"
+      },
+      "portuguese": {
+        "name": "Portuguese",
+        "code": "pt-br"
+      }
     }
   }
 }

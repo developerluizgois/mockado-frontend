@@ -14,6 +14,10 @@ import {
 import { Icons } from "../icons";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
+import Logo from '../../../public/logo.svg';
+import Image from "next/image";
+import LocalSwitcher from "./LocalSwitcher";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -43,74 +47,87 @@ ListItem.displayName = "ListItem";
 const Header = () => {
   const t = useTranslations("navigation");
   return (
-    <header>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="/about" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {t("links.about")}
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              {t("links.documentation")}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/about"
-                    >
-                      <Icons.gitHub className="h-6 w-6" />
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Mockado
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Dados fictícios, porém realistas.
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem
-                  href="/getting-started"
-                  title={t("sub_links.getting_started.title")}
-                >
-                  {t("sub_links.getting_started.description")}
-                </ListItem>
-                <ListItem
-                  href="/api-reference"
-                  title={t("sub_links.api_reference.title")}
-                >
-                  {t("sub_links.api_reference.description")}
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>{t("links.features")}</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[400px] ">
-                <ListItem
-                  href="/features/basic"
-                  title={t("sub_links.most_used_features.title")}
-                >
-                  {t("sub_links.most_used_features.description")}
-                </ListItem>
-                <ListItem
-                  href="/features/customization"
-                  title={t("sub_links.customization.title")}
-                >
-                  {t("sub_links.customization.description")}
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+    <header className="px-[100px] py-[20px] border-b-[1px] border-[#151515] flex items-center justify-between">
+      <div className="flex gap-8">
+        <div className="bg-[#151515] p-3 rounded-md">
+          <Image alt="logo image" src={Logo} className="h-4 w-4" />
+        </div>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  {t("links.about")}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                {t("links.documentation")}
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="/about"
+                      >
+                        <Icons.gitHub className="h-6 w-6" />
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          Mockado
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Dados fictícios, porém realistas.
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem
+                    href="/getting-started"
+                    title={t("sub_links.getting_started.title")}
+                  >
+                    {t("sub_links.getting_started.description")}
+                  </ListItem>
+                  <ListItem
+                    href="/api-reference"
+                    title={t("sub_links.api_reference.title")}
+                  >
+                    {t("sub_links.api_reference.description")}
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                {t("links.features")}
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[400px] ">
+                  <ListItem
+                    href="/features/basic"
+                    title={t("sub_links.most_used_features.title")}
+                  >
+                    {t("sub_links.most_used_features.description")}
+                  </ListItem>
+                  <ListItem
+                    href="/features/customization"
+                    title={t("sub_links.customization.title")}
+                  >
+                    {t("sub_links.customization.description")}
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+      <div className="flex items-center gap-6">
+        <LocalSwitcher />
+        <Link href="https://github.com/luizfelipegois/mockado">
+          <GitHubLogoIcon className="w-6 h-6" />
+        </Link>
+      </div>
     </header>
   );
 };
