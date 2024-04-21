@@ -1,5 +1,27 @@
 {
-  "Index": {
-    "title": "Olá mundo!"
+  "navigation": {
+    "links": {
+      "about": "Sobre",
+      "documentation": "Documentação",
+      "features": "Recursos"
+    },
+    "sub_links": {
+      "getting_started": {
+        "title": "Começando",
+        "description": "Aprenda a aplicar rapidamente o Mockado em seus projetos"
+      },
+      "api_reference": {
+        "title": "Referência da API",
+        "description": "Encontre uma lista completa de acessórios e opções"
+      },
+      "most_used_features": {
+        "title": "Recursos mais utilizados",
+        "description": "Emails, Password, Full name, username"
+      },
+      "customization": {
+        "title": "Customização",
+        "description": "Type, Gênero, Formato, Code"
+      }
+    }
   }
 }

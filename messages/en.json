@@ -1,5 +1,27 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "navigation": {
+    "links": {
+      "about": "About",
+      "documentation": "Documentation",
+      "features": "Features"
+    },
+    "sub_links": {
+      "getting_started": {
+        "title": "Getting started",
+        "description": "Learn how to quickly apply Mockado to your projects"
+      },
+      "api_reference": {
+        "title": "API reference",
+        "description": "Find a complete list of accessories and options"
+      },
+      "most_used_features": {
+        "title": "Most used resources",
+        "description": "Emails, Password, Full name, username"
+      },
+      "customization": {
+        "title": "Customization",
+        "description": "Type, Gender, Format, Code"
+      }
+    }
   }
 }
