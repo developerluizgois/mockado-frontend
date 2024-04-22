@@ -188,7 +188,7 @@ const Header = () => {
           </div>
         </header>
       </div>
-      <header className="hidden px-[100px] py-[20px] border-b-[1px] border-[#151515] bg-[#101010] lg:flex items-center justify-between">
+      <header className="hidden fixed w-screen px-[100px] py-[20px] border-b-[1px] border-[#151515] bg-[#101010] lg:flex items-center justify-between">
         <div className="flex gap-8">
           <div className="bg-[#151515] p-3 rounded-md">
             <Image alt="logo image" src={Logo} className="h-4 w-4" />
