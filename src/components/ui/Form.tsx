@@ -3,9 +3,12 @@
 import React, { useState } from 'react';
 import { useTranslations } from "next-intl";
 import mockado from "mockado";
+import { EyeClosedIcon, EyeOpenIcon, KeyboardIcon } from '@radix-ui/react-icons';
 
 const Form = () => {
   const t = useTranslations("about_page.form");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [data, setData] = useState({
     fullname: "",
     email: "",
@@ -50,7 +53,7 @@ const Form = () => {
           {t("inputs.fullname.label")}
           <input
             type="text"
-            className="p-4 rounded-sm bg-[#101010] text-[14px]"
+            className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             placeholder={t("inputs.fullname.placeholder")}
             value={data.fullname}
           />
@@ -59,7 +62,7 @@ const Form = () => {
           {t("inputs.email.label")}
           <input
             type="text"
-            className="p-4 rounded-sm bg-[#101010] text-[14px]"
+            className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             placeholder={t("inputs.email.placeholder")}
             value={data.email}
           />
@@ -68,7 +71,7 @@ const Form = () => {
           {t("inputs.address.label")}
           <input
             type="text"
-            className="p-4 rounded-sm bg-[#101010] text-[14px]"
+            className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             placeholder={t("inputs.address.placeholder")}
             value={data.address}
           />
@@ -77,27 +80,57 @@ const Form = () => {
           {t("inputs.date_of_birth.label")}
           <input
             type="date"
-            className="p-4 rounded-sm bg-[#101010] text-[14px]"
+            className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             value={data.dateOfBirth}
           />
         </label>
         <label htmlFor="" className="flex flex-col font-semibold gap-2">
           {t("inputs.password.label")}
-          <input
-            type="password"
-            className="p-4 rounded-sm bg-[#101010] text-[14px]"
-            placeholder={t("inputs.password.placeholder")}
-            value={data.password}
-          />
+          <div className="w-full bg-[#101010] flex items-center">
+            <input
+              type={showPassword ? "text" : "password"}
+              className="p-4 rounded-sm bg-[#101010] text-[14px] w-full outline-none"
+              placeholder={t("inputs.password.placeholder")}
+              value={data.password}
+            />
+            {!showPassword ? (
+              <EyeClosedIcon
+                className="w-6 h-6 mx-3 cursor-pointer"
+                onClick={() => setShowPassword((prevState) => !prevState)}
+              />
+            ) : (
+              <EyeOpenIcon
+                className="w-6 h-6 mx-3 cursor-pointer"
+                onClick={() => setShowPassword((prevState) => !prevState)}
+              />
+            )}
+          </div>
         </label>
         <label htmlFor="" className="flex flex-col font-semibold gap-2">
           {t("inputs.confirm_password.label")}
-          <input
-            type="password"
-            className="p-4 rounded-sm bg-[#101010] text-[14px]"
-            placeholder={t("inputs.confirm_password.placeholder")}
-            value={data.password}
-          />
+          <div className="w-full bg-[#101010] flex items-center">
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              className="p-4 rounded-sm bg-[#101010] text-[14px] w-full outline-none"
+              placeholder={t("inputs.confirm_password.placeholder")}
+              value={data.password}
+            />
+            {!showConfirmPassword ? (
+              <EyeClosedIcon
+                className="w-6 h-6 mx-3 cursor-pointer"
+                onClick={() =>
+                  setShowConfirmPassword((prevState) => !prevState)
+                }
+              />
+            ) : (
+              <EyeOpenIcon
+                className="w-6 h-6 mx-3 cursor-pointer"
+                onClick={() =>
+                  setShowConfirmPassword((prevState) => !prevState)
+                }
+              />
+            )}
+          </div>
         </label>
         <button className="bg-[#1F6EEB] font-medium p-3 rounded-md">
           {t("button_text")}
