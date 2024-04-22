@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "@/navigation";
 import CodeSnippet from "@/components/ui/CodeSnippet";
 import ExpandableCodeSnippet from "@/components/ui/ExpandableCodeSnippet";
@@ -8,30 +8,53 @@ import ExpandableCodeSnippet from "@/components/ui/ExpandableCodeSnippet";
 const GettingStarted = () => {
   const installRef = useRef<HTMLDivElement | null>(null);
   const usageRef = useRef<HTMLDivElement | null>(null);
+  const [linkSelected, setLinkSelected] = useState("install");
 
   return (
     <div className="w-screen min-h-screen pt-[81px] px-[100px] flex">
       <aside className="pt-[100px] w-[25%] h-[100%] relative">
         <div className="flex flex-col gap-6 fixed">
           <span>Nesta página</span>
-          <ul className="flex flex-col gap-2 border-l-[1px] border-l[#505050]">
-            <li className="border-l-[3px] border-l-[#1F6EEB] pl-4 text-[#f2f2f2]">
+          <ul className="flex flex-col gap-2 border-l-[1px] border-l-[#505050]">
+            <li
+              className={`border-l-[3px] ${
+                linkSelected === "install"
+                  ? "border-l-[#1F6EEB]"
+                  : "border-l-[#050505]"
+              } pl-4 ${
+                linkSelected === "install" ? "text-[#f2f2f2]" : "text-[#505050]"
+              }`}
+            >
               <button
+                className="p-0 b-0"
                 onClick={() => {
                   installRef.current?.scrollIntoView({
                     behavior: "smooth",
                   });
+
+                  setLinkSelected("install")
                 }}
               >
                 Instalação
               </button>
             </li>
-            <li className="pl-4 border-l-[3px] border-l-[#050505] text-[#505050]">
+            <li
+              className={`border-l-[3px] ${
+                linkSelected === "usage"
+                  ? "border-l-[#1F6EEB]"
+                  : "border-l-[#050505]"
+              } pl-4 ${
+                linkSelected === "usage" ? "text-[#f2f2f2]" : "text-[#505050]"
+              }`}
+            >
               <button
+                className="p-0 b-0"
                 onClick={() => {
                   usageRef.current?.scrollIntoView({
                     behavior: "smooth",
                   });
+
+                  setLinkSelected("usage");
                 }}
               >
                 Uso
