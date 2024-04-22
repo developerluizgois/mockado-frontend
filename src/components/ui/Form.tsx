@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useTranslations } from "next-intl";
 import mockado from "mockado";
-import { EyeClosedIcon, EyeOpenIcon, KeyboardIcon } from '@radix-ui/react-icons';
+import { EyeClosedIcon, EyeOpenIcon } from '@radix-ui/react-icons';
 
 const Form = () => {
   const t = useTranslations("about_page.form");

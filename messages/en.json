@@ -70,5 +70,8 @@
       },
       "button_text": "Submit"
     }
+  },
+  "footer": {
+    "developer_text": "Development by"
   }
 }
