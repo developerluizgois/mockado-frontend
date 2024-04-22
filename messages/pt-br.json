@@ -33,5 +33,12 @@
         "code": "pt-br"
       }
     }
+  },
+  "about_page": {
+    "presentation": {
+      "title": "Dados fictícios, porém realistas.",
+      "description": "Mockado é uma biblioteca JavaScript de código aberto que oferece dados aleatórios de maneira simples, sendo ideal para uso em ambientes de testes automatizados e bancos de dados. Sua utilização é extremamente simples e permite personalização fácil das saídas desejadas. Com Mockado, você pode facilmente gerar emails e senhas com tamanhos específicos, incluindo ou não números, além de definir nomes de usuário com base em gênero ou número de caracteres desejado.",
+      "button_text": "Começar"
+    }
   }
 }

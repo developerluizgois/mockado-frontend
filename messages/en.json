@@ -33,5 +33,12 @@
         "code": "pt-br"
       }
     }
+  },
+  "about_page": {
+    "presentation": {
+      "title": "Fictional data, for realists.",
+      "description": "Mockado is an open source JavaScript library that provides random data in a simple way, making it ideal for use in automated testing environments and databases. Its use is extremely simple and allows easy customization of the desired outputs. With Mockado, you can easily generate emails and passwords with specific lengths, whether or not they include numbers, as well as define usernames based on gender or the desired number of characters.",
+      "button_text": "To start"
+    }
   }
 }
