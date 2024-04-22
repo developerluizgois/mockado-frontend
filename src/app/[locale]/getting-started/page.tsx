@@ -1,10 +1,14 @@
 'use client'
 
+import { useRef } from "react";
 import { Link } from "@/navigation";
 import CodeSnippet from "@/components/ui/CodeSnippet";
 import ExpandableCodeSnippet from "@/components/ui/ExpandableCodeSnippet";
 
 const GettingStarted = () => {
+  const installRef = useRef<HTMLDivElement | null>(null);
+  const usageRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <div className="w-screen min-h-screen pt-[81px] px-[100px] flex">
       <aside className="pt-[100px] w-[25%] h-[100%] relative">
@@ -12,14 +16,26 @@ const GettingStarted = () => {
           <span>Nesta página</span>
           <ul className="flex flex-col gap-2 border-l-[1px] border-l[#505050]">
             <li className="border-l-[3px] border-l-[#1F6EEB] pl-4 text-[#f2f2f2]">
-              <Link href="#installation">
+              <button
+                onClick={() => {
+                  installRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 Instalação
-              </Link>
+              </button>
             </li>
             <li className="pl-4 border-l-[3px] border-l-[#050505] text-[#505050]">
-              <Link href="#usage">
+              <button
+                onClick={() => {
+                  usageRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 Uso
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
@@ -27,6 +43,12 @@ const GettingStarted = () => {
       <section className="pt-[100px] w-[50%] flex flex-col gap-6">
         <h1 className="text-[52px] font-bold">Começando</h1>
         <p>
+          Começe a usar Mockado e aprenda explorando{" "}
+          <Link className="text-[#206DEB]" href="/features/basic">
+            exemplos básicos.
+          </Link>
+        </p>
+        <p ref={installRef}>
           Mockado vem para te auxiliar nos seus desenvolvimentos em ambientes de
           testes ou qualquer outro cenário onde você necessite de dados
           fictícios. Nossos módulos podem ser utilizados facilmente chamando
@@ -34,9 +56,7 @@ const GettingStarted = () => {
           personalizar de acordo com sua necessidade.
         </p>
         <div className="flex flex-col gap-6">
-          <h2 id="installation" className="text-[32px]">
-            Instalação
-          </h2>
+          <h2 className="text-[32px]">Instalação</h2>
           <p>
             Mockado está disponível para download no registro npm. Use seu
             gerenciador de pacotes preferido:
@@ -45,7 +65,7 @@ const GettingStarted = () => {
           <CodeSnippet code="yarn add mockado" />
         </div>
         <div className="flex flex-col gap-6">
-          <h2 id="usage" className="text-[32px]">
+          <h2 ref={usageRef} id="usage" className="text-[32px]">
             Uso
           </h2>
           <p>

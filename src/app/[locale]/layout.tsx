@@ -29,17 +29,17 @@ export default function LocaleLayout({
     <html lang={locale}>
       <body className={`${open_sans.className}`}>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
             {children}
             <Footer />
           </NextIntlClientProvider>
-          </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
