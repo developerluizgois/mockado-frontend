@@ -4,6 +4,7 @@ import "../globals.css";
 import Header from "@/components/ui/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import Footer from "@/components/ui/Footer";
 
 const open_sans = Open_Sans({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function LocaleLayout({
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header />
             {children}
+            <Footer />
           </NextIntlClientProvider>
           </ThemeProvider>
       </body>

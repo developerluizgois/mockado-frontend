@@ -70,5 +70,8 @@
       },
       "button_text": "Enviar"
     }
+  },
+  "footer": {
+    "developer_text": "Construído por"
   }
 }
