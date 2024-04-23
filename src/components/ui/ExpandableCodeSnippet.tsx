@@ -33,6 +33,7 @@ const ExpandableCodeSnippet: React.FC<ExpandableCodeSnippetProps> = ({
         customStyle={{ backgroundColor: "#1D1F21" }}
         language="jsx"
         style={tomorrowNight}
+        wrapLongLines
       >
         {code}
       </SyntaxHighlighter>

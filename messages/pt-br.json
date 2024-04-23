@@ -71,6 +71,26 @@
       "button_text": "Enviar"
     }
   },
+  "getting_started_page": {
+    "title": "Começando",
+    "sub_title": {
+      "text": "Começe a usar Mockado e aprenda explorando",
+      "link_text": "exemplos básicos."
+    },
+    "description": "Mockado vem para te auxiliar nos seus desenvolvimentos em ambientes de testes ou qualquer outro cenário onde você necessite de dados fictícios. Nossos módulos podem ser utilizados facilmente chamando funções responsáveis por fornecer cada tipo de dado, bem como personalizar de acordo com sua necessidade.",
+    "section_installation": {
+      "title": "Instalação",
+      "description": "Mockado está disponível para download no registro npm. Use seu gerenciador de pacotes preferido:"
+    },
+    "section_usage": {
+      "title": "Uso",
+      "description": {
+        "text_before": "Importe o modulo mockado para ter acesso a todas as funcoes disponiveis para gerar dados aleatorios realistas, tais como: username, email, password e password (consulte a",
+        "link_text": "referência da API",
+        "text_after": "para obter uma lista completa de acessórios disponíveis)."
+      }
+    }
+  },
   "footer": {
     "developer_text": "Construído por"
   }
