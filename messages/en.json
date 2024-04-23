@@ -71,6 +71,26 @@
       "button_text": "Submit"
     }
   },
+  "getting_started_page": {
+    "title": "Starting",
+    "sub_title": {
+      "text": "Start using Mockado and learn by exploring",
+      "link_text": "basic examples."
+    },
+    "description": "Mockado comes to help you with your developments in test environments or any other scenario where you need fictitious data. Our modules can be easily used by calling functions responsible for providing each type of data, as well as customizing according to your needs.",
+    "section_installation": {
+      "title": "installation",
+      "description": "Mockado is available for download from the npm registry. Use your preferred package manager:"
+    },
+    "section_usage": {
+      "title": "Usage",
+      "description": {
+        "text_before": "Import the mocked module to have access to all available functions to generate realistic random data, such as: username, email, password and password (see",
+        "link_text": "API reference",
+        "text_after": "for a complete list of available accessories)."
+      }
+    }
+  },
   "footer": {
     "developer_text": "Development by"
   }
