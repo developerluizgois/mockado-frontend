@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState } from "react";
 import { CopyIcon } from "@radix-ui/react-icons";
 import { CopyToClipboard } from "react-copy-to-clipboard";

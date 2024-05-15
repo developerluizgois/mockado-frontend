@@ -17,29 +17,33 @@ export const metadata: Metadata = {
   description: "Have fictitious yet realistic data for your development tests or other needs.",
 };
 
-export default function LocaleLayout({
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}
+
+export default function RootLayout({
   children,
   params: { locale },
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-  }) {
-   const messages = useMessages();
+}: Readonly<RootLayoutProps>) {
+  const messages = useMessages();
   return (
     <html lang={locale}>
       <body className={`${open_sans.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
             <Header />
             {children}
             <Footer />
-          </NextIntlClientProvider>
-        </ThemeProvider>
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
