@@ -171,15 +171,6 @@ const Header = () => {
                           {t("sub_links.most_used_features.description")}
                         </span>
                       </Link>
-                      <Link
-                        className="flex flex-col"
-                        href="/features/customization"
-                      >
-                        {t("sub_links.customization.title")}
-                        <span className="text-[16px] text-[#505050]">
-                          {t("sub_links.customization.description")}
-                        </span>
-                      </Link>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
@@ -250,12 +241,6 @@ const Header = () => {
                       title={t("sub_links.most_used_features.title")}
                     >
                       {t("sub_links.most_used_features.description")}
-                    </ListItem>
-                    <ListItem
-                      href="/features/customization"
-                      title={t("sub_links.customization.title")}
-                    >
-                      {t("sub_links.customization.description")}
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

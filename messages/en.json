@@ -69,6 +69,11 @@
         }
       },
       "button_text": "Submit"
+    },
+    "statistic": {
+      "version": "Version",
+      "downloads": "Downloads last month",
+      "year": "Generating fictitious data since year"
     }
   },
   "getting_started_page": {
@@ -89,6 +94,72 @@
         "link_text": "API reference",
         "text_after": "for a complete list of available accessories)."
       }
+    }
+  },
+  "api_reference_page": {
+    "title": "API reference",
+    "description": "Below is a complete list of options and accessories that the Mockado module functions support. Some settings can be passed directly as a parameter, others can only be passed in the options parameter with key and value.",
+    "section_name": {
+      "description_gender": "Set the gender you want for random name generator.",
+      "description_type": "Set the type you want for random name generator.",
+      "type": "Type",
+      "default": "Default"
+    }
+  },
+  "features_page": {
+    "title": "Features",
+    "description": "Mockado always returns default data. To receive personalized data, you need to pass your preferences as a parameter. The type of data returned varies depending on the function called. Below are examples of basic use.",
+    "firstName": {
+      "title": "First Name",
+      "description": "To obtain a female firstName."
+    },
+    "fullName": {
+      "title": "Full Name",
+      "description": "Get a full name without gender"
+    },
+    "email_default": {
+      "title": "Default Email",
+      "description": "Get a default email."
+    },
+    "email_with_defined_domain": {
+      "title": "Email with defined domain",
+      "description": "Get a email with defined domain."
+    },
+    "email_with_defined_domain_and_gender": {
+      "title": "Email with defined domain and gender",
+      "description": "Get a email with defined domain and gender."
+    },
+    "password_default": {
+      "title": "Default Password",
+      "description": "Get a default password."
+    },
+    "custom_password": {
+      "title": "Custom password",
+      "description": "Get a custom password."
+    },
+    "date_default": {
+      "title": "Default Date",
+      "description": "Get a default date."
+    },
+    "date_between_a_specified_start_and_end": {
+      "title": "Date between a specified start and end",
+      "description": "Get a date between a specified start and end."
+    },
+    "phone_number": {
+      "title": "Phone Number",
+      "description": "Get a phone number."
+    },
+    "phone_number_with_specified_code": {
+      "title": "Phone Number with specified code",
+      "description": "Get a phone number with specified code."
+    },
+    "location": {
+      "title": "Default Location",
+      "description": "Get a default location."
+    },
+    "get_just_the_street": {
+      "title": "Get just the street",
+      "description": "Get just the street."
     }
   },
   "footer": {
