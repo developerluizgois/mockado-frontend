@@ -1,8 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Link } from "@/navigation";
-import CodeSnippet from "@/components/ui/CodeSnippet";
 import ExpandableCodeSnippet from "@/components/ui/ExpandableCodeSnippet";
 import { useTranslations } from "next-intl";
 

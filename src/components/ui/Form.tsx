@@ -55,7 +55,7 @@ const Form = () => {
             type="text"
             className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             placeholder={t("inputs.fullname.placeholder")}
-            value={data.fullname}
+            defaultValue={data.fullname}
           />
         </label>
         <label htmlFor="" className="flex flex-col font-semibold gap-2">
@@ -64,7 +64,7 @@ const Form = () => {
             type="text"
             className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             placeholder={t("inputs.email.placeholder")}
-            value={data.email}
+            defaultValue={data.email}
           />
         </label>
         <label htmlFor="" className="flex flex-col font-semibold gap-2">
@@ -73,7 +73,7 @@ const Form = () => {
             type="text"
             className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
             placeholder={t("inputs.address.placeholder")}
-            value={data.address}
+            defaultValue={data.address}
           />
         </label>
         <label htmlFor="" className="flex flex-col font-semibold gap-2">
@@ -81,7 +81,7 @@ const Form = () => {
           <input
             type="date"
             className="p-4 rounded-sm bg-[#101010] text-[14px] outline-none"
-            value={data.dateOfBirth}
+            defaultValue={data.dateOfBirth}
           />
         </label>
         <label htmlFor="" className="flex flex-col font-semibold gap-2">
@@ -91,7 +91,7 @@ const Form = () => {
               type={showPassword ? "text" : "password"}
               className="p-4 rounded-sm bg-[#101010] text-[14px] w-full outline-none"
               placeholder={t("inputs.password.placeholder")}
-              value={data.password}
+              defaultValue={data.password}
             />
             {!showPassword ? (
               <EyeClosedIcon
@@ -113,7 +113,7 @@ const Form = () => {
               type={showConfirmPassword ? "text" : "password"}
               className="p-4 rounded-sm bg-[#101010] text-[14px] w-full outline-none"
               placeholder={t("inputs.confirm_password.placeholder")}
-              value={data.password}
+              defaultValue={data.password}
             />
             {!showConfirmPassword ? (
               <EyeClosedIcon
