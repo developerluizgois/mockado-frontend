@@ -69,6 +69,11 @@
         }
       },
       "button_text": "Enviar"
+    },
+    "statistic": {
+      "version": "Versão",
+      "downloads": "Downloads no último mês",
+      "year": "Gerando dados fictícios desde o ano"
     }
   },
   "getting_started_page": {
@@ -89,6 +94,72 @@
         "link_text": "referência da API",
         "text_after": "para obter uma lista completa de acessórios disponíveis)."
       }
+    }
+  },
+  "api_reference_page": {
+    "title": "Referência da API",
+    "description": "Abaixo há uma lista completa de opções e acessórios que as funções do modulo Mockado suporta. Algumas configurações podem ser passadas diretamente como um parâmetro, outras só podem ser passadas no parâmetro de opções com chave e valor.",
+    "section_name": {
+      "description_gender": "Defina o gênero desejado para o gerador de nomes aleatórios",
+      "description_type": "Defina o tipo desejado para o gerador de nomes aleatórios",
+      "type": "Tipo",
+      "default": "Padrão"
+    }
+  },
+  "features_page": {
+    "title": "Recursos",
+    "description": "Mockado sempre retorna dados padrão. Para receber dados personalizados, você precisa passar como parâmetro suas preferências. O tipo de dados retornados varia dependendo da função chamada. Abaixo estão exemplos de uso básico.",
+    "firstName": {
+      "title": "Primeiro Nome",
+      "description": "Obter um primeiro nome feminino."
+    },
+    "fullName": {
+      "title": "Nome Completo",
+      "description": "Obtenha um nome completo sem gênero."
+    },
+    "email_default": {
+      "title": "Email Padrão",
+      "description": "Obtenha um e-mail padrão."
+    },
+    "email_with_defined_domain": {
+      "title": "E-mail com domínio definido",
+      "description": "Obtenha um e-mail com domínio definido."
+    },
+    "email_with_defined_domain_and_gender": {
+      "title": "E-mail com domínio e gênero definido",
+      "description": "Obtenha um e-mail com domínio e gênero definido."
+    },
+    "password_default": {
+      "title": "Senha Padrão",
+      "description": "Obtenha uma senha padrão."
+    },
+    "custom_password": {
+      "title": "Senha customizada",
+      "description": "Obtenha uma senha customizada."
+    },
+    "date_default": {
+      "title": "Data Padrão",
+      "description": "Obtenha uma data Padrão."
+    },
+    "date_between_a_specified_start_and_end": {
+      "title": "Data entre um início e um fim especificados",
+      "description": "Obtenha uma data entre um início e um fim especificados."
+    },
+    "phone_number": {
+      "title": "Número de Celular",
+      "description": "Obtenha um número de celular."
+    },
+    "phone_number_with_specified_code": {
+      "title": "Número de telefone com código especificado",
+      "description": "Obtenha um número de telefone com o código especificado."
+    },
+    "location": {
+      "title": "Localização padrão",
+      "description": "Obtenha uma localização padrão."
+    },
+    "get_just_the_street": {
+      "title": "Pegue apenas a rua",
+      "description": "Obtenha apenas a rua."
     }
   },
   "footer": {
