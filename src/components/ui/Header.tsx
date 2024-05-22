@@ -126,7 +126,11 @@ const Header = () => {
               variants={motionVariants}
               className="w-full"
             >
-              <motion.li className="py-4" variants={listItemVariants}>
+              <motion.li
+                onClick={() => setMenuActive(false)}
+                className="py-4"
+                variants={listItemVariants}
+              >
                 <Link className="w-full text-[22px]" href="/about">
                   {t("links.about")}
                 </Link>
@@ -141,13 +145,18 @@ const Header = () => {
                       <Link
                         className="flex flex-col mb-6"
                         href="/getting-started"
+                        onClick={() => setMenuActive(false)}
                       >
                         {t("sub_links.getting_started.title")}
                         <span className="text-[16px] text-[#505050]">
                           {t("sub_links.getting_started.description")}
                         </span>
                       </Link>
-                      <Link className="flex flex-col" href="/api-reference">
+                      <Link
+                        className="flex flex-col"
+                        href="/api-reference"
+                        onClick={() => setMenuActive(false)}
+                      >
                         {t("sub_links.api_reference.title")}
                         <span className="text-[16px] text-[#505050]">
                           {t("sub_links.api_reference.description")}
@@ -165,6 +174,7 @@ const Header = () => {
                       <Link
                         className="flex flex-col mb-6"
                         href="/features/basic"
+                        onClick={() => setMenuActive(false)}
                       >
                         {t("sub_links.most_used_features.title")}
                         <span className="text-[16px] text-[#505050]">
